@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cc.tuhaolicai</groupId>
+    <artifactId>axon_demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>core</module>
+        <module>integration</module>
+        <module>integerationtests</module>
+        <module>test</module>
+    </modules>
+
+    <packaging>pom</packaging>
+
+
+    <name>Axon_demo</name>
+    <description>
+        axon框架源码学习
+        ps：代码中的中文注释仅供参考，不保证正确。
+    </description>
+    <url>http://www.tuhaolicai.cc</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.resources.dir>${project.basedir}/src/main/resources</project.resources.dir>
+        <jstl.version>1.2</jstl.version>
+        <jfinal.version>3.1</jfinal.version>
+        <cglib-nodep.version>3.2.5</cglib-nodep.version>
+        <jfinal-quartz.version>0.2</jfinal-quartz.version>
+        <jfinal-utils.version>0.1</jfinal-utils.version>
+        <quartz.version>2.2.3</quartz.version>
+        <gson.version>2.7</gson.version>
+        <junit.version>4.12</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j.version>1.7.24</slf4j.version>
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <guava.version>21.0</guava.version>
+        <mongodb-driver.version>3.4.2</mongodb-driver.version>
+        <json.version>20160810</json.version>
+        <spring.version>3.0.5.RELEASE</spring.version>
+    </properties>
+
+    <dependencies>
+        <!-- test dependencies -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.8.0</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
